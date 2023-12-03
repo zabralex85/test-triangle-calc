@@ -1,4 +1,4 @@
-﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Jobs;
 using TriangleCalc.Lib;
 using TriangleCalc.Lib.Interfaces;

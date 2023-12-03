@@ -9,8 +9,8 @@ Intel Core i7-9700 CPU 3.00GHz, 1 CPU, 8 logical and 8 physical cores
 Job=NativeAOT 8.0  Runtime=NativeAOT 8.0  
 
 ```
-| Method                  | Mean     | Error     | StdDev    |
-|------------------------ |---------:|----------:|----------:|
-| BenchmarkRightTriangle  | 1.975 ns | 0.0120 ns | 0.0112 ns |
-| BenchmarkAcuteTriangle  | 2.165 ns | 0.0112 ns | 0.0093 ns |
-| BenchmarkObtuseTriangle | 2.202 ns | 0.0095 ns | 0.0085 ns |
+| Method                  | Mean      | Error     | StdDev    |
+|------------------------ |----------:|----------:|----------:|
+| BenchmarkRightTriangle  | 0.8813 ns | 0.0110 ns | 0.0098 ns |
+| BenchmarkAcuteTriangle  | 0.7798 ns | 0.0040 ns | 0.0037 ns |
+| BenchmarkObtuseTriangle | 0.8693 ns | 0.0050 ns | 0.0047 ns |

@@ -1,16 +1,15 @@
-﻿// Create a TriangleTypeDeterminer instance
+// Create a TriangleTypeDeterminerBase instance
 
 using System.Globalization;
 using TriangleCalc.Lib;
-using TriangleCalc.Lib.Interfaces;
 using TriangleCalc.Lib.Models;
 
-ITriangleTypeDeterminer typeDeterminer = new TriangleTypeDeterminer();
+var typeDeterminer = new TriangleTypeDeterminer();
 
 // Create triangles
-Triangle acuteTriangle = new Triangle(5, 6, 7);
-Triangle rightTriangle = new Triangle(3, 4, 5);
-Triangle obtuseTriangle = new Triangle(6, 8, 12);
+var acuteTriangle = new Triangle(5F, 6D, 7);
+var rightTriangle = new Triangle(3D, 4, 5);
+var obtuseTriangle = new Triangle(6F, 8, 12);
 
 var culture = CultureInfo.GetCultureInfo("ru-RU");
 

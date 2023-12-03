@@ -5,7 +5,31 @@ Intel Core i7-9700 CPU 3.00GHz, 1 CPU, 8 logical and 8 physical cores
 
 Job=NativeAOT 8.0  Runtime=NativeAOT 8.0
 
-std:
+### unc + struct + inl + sealed
+
+| Method                  | Mean      | Error     | StdDev    |
+|------------------------ |----------:|----------:|----------:|
+| BenchmarkRightTriangle  | 0.2997 ns | 0.0085 ns | 0.0079 ns |
+| BenchmarkAcuteTriangle  | 0.3226 ns | 0.0079 ns | 0.0074 ns |
+| BenchmarkObtuseTriangle | 0.3603 ns | 0.0074 ns | 0.0065 ns |
+
+### unc + class + inl
+
+| Method                  | Mean      | Error     | StdDev    |
+|------------------------ |----------:|----------:|----------:|
+| BenchmarkRightTriangle  | 0.8083 ns | 0.0060 ns | 0.0056 ns |
+| BenchmarkAcuteTriangle  | 0.7994 ns | 0.0048 ns | 0.0040 ns |
+| BenchmarkObtuseTriangle | 0.8081 ns | 0.0042 ns | 0.0037 ns |
+
+### unc + class
+
+| Method                  | Mean     | Error     | StdDev    |
+|------------------------ |---------:|----------:|----------:|
+| BenchmarkRightTriangle  | 1.975 ns | 0.0120 ns | 0.0112 ns |
+| BenchmarkAcuteTriangle  | 2.165 ns | 0.0112 ns | 0.0093 ns |
+| BenchmarkObtuseTriangle | 2.202 ns | 0.0095 ns | 0.0085 ns |
+
+### std:
 
 | Method                  | Mean      | Error     | StdDev    |
 |------------------------ |----------:|----------:|----------:|
@@ -13,20 +37,5 @@ std:
 | BenchmarkObtuseTriangle |  2.196 ns | 0.0148 ns | 0.0131 ns |
 | BenchmarkRightTriangle  |  1.946 ns | 0.0069 ns | 0.0061 ns |
 
-uns+unc
-
-| Method                  | Mean     | Error     | StdDev    |
-|------------------------ |---------:|----------:|----------:|
-| BenchmarkRightTriangle  | 1.980 ns | 0.0108 ns | 0.0101 ns |
-| BenchmarkAcuteTriangle  | 2.183 ns | 0.0058 ns | 0.0049 ns |
-| BenchmarkObtuseTriangle | 2.188 ns | 0.0072 ns | 0.0060 ns |
-
-unc
-
-| Method                  | Mean     | Error     | StdDev    |
-|------------------------ |---------:|----------:|----------:|
-| BenchmarkRightTriangle  | 1.975 ns | 0.0120 ns | 0.0112 ns |
-| BenchmarkAcuteTriangle  | 2.165 ns | 0.0112 ns | 0.0093 ns |
-| BenchmarkObtuseTriangle | 2.202 ns | 0.0095 ns | 0.0085 ns |
 
 ## To Run: `dotnet run -c Release`

@@ -1,4 +1,4 @@
-﻿using Bogus;
+using Bogus;
 using TriangleCalc.Lib;
 using TriangleCalc.Lib.Interfaces;
 using TriangleCalc.Lib.Models;

@@ -1,4 +1,4 @@
-﻿namespace TriangleCalc.Lib.Enums
+namespace TriangleCalc.Lib.Enums
 {
     /// <summary>
     /// Represents the possible types of triangles.
