@@ -11,6 +11,6 @@ Job=NativeAOT 8.0  Runtime=NativeAOT 8.0
 ```
 | Method                  | Mean      | Error     | StdDev    |
 |------------------------ |----------:|----------:|----------:|
-| BenchmarkRightTriangle  | 0.8813 ns | 0.0110 ns | 0.0098 ns |
-| BenchmarkAcuteTriangle  | 0.7798 ns | 0.0040 ns | 0.0037 ns |
-| BenchmarkObtuseTriangle | 0.8693 ns | 0.0050 ns | 0.0047 ns |
+| BenchmarkRightTriangle  | 0.7341 ns | 0.0052 ns | 0.0047 ns |
+| BenchmarkAcuteTriangle  | 0.9029 ns | 0.0071 ns | 0.0060 ns |
+| BenchmarkObtuseTriangle | 0.7253 ns | 0.0061 ns | 0.0054 ns |

@@ -3,7 +3,7 @@ namespace TriangleCalc.Lib.Models;
 /// <summary>
 /// Represents a triangle in 2D space with floating-point coordinates.
 /// </summary>
-public struct Triangle
+public readonly struct Triangle
 {
     public double SideA { get; }
     public double SideB { get; }

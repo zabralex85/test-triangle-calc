@@ -50,7 +50,7 @@ namespace TriangleCalc.Lib
             {
                 return TriangleType.Invalid;
             }
-
+            
             double sideA = triangle.SideA, sideB = triangle.SideB, sideC = triangle.SideC;
             double maxSide = sideA, minSide1 = sideB, minSide2 = sideC;
 
@@ -61,7 +61,7 @@ namespace TriangleCalc.Lib
                 minSide2 = sideC;
             }
 
-            if (sideC > maxSide)
+            if (triangle.SideC > maxSide)
             {
                 maxSide = sideC;
                 minSide1 = sideA;
