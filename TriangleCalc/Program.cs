@@ -21,10 +21,7 @@ namespace TriangleCalc
         {
             for (int i = 0; i < num; i++)
             {
-                GetTriangles(5, 6, 10, suppressConsole);
-                GetTriangles(5F, 6D, 7, suppressConsole);
-                GetTriangles(3D, 4, 5, suppressConsole);
-                GetTriangles(6F, 8, 12, suppressConsole);
+                GetTriangles(5, 6, 0, suppressConsole);
             }
         }
 

@@ -77,19 +77,19 @@ namespace TriangleCalc.Lib
                 minSide1 = sideA;
                 minSide2 = sideB;
             }
-
-            if (minSide1 + minSide2 <= maxSide)
-            {
-                return TriangleType.Invalid;
-            }
-
-            if (maxSide <= 0 || minSide1 <= 0 || minSide2 <= 0)
-            {
-                return TriangleType.Invalid;
-            }
-
+            
             unchecked
             {
+                if (minSide1 + minSide2 <= maxSide)
+                {
+                    return TriangleType.Invalid;
+                }
+
+                if (maxSide <= 0 || minSide1 <= 0 || minSide2 <= 0)
+                {
+                    return TriangleType.Invalid;
+                }
+
                 // Determine the type of the triangle
                 double maxSideSquared = maxSide * maxSide;
                 double sumOfSquares = minSide1 * minSide1 + minSide2 * minSide2;
