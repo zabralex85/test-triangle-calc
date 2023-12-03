@@ -1,32 +1,51 @@
 // Create a TriangleTypeDeterminerBase instance
 
+using System;
 using System.Globalization;
 using TriangleCalc.Lib;
 using TriangleCalc.Lib.Models;
 
-var typeDeterminer = new TriangleTypeDeterminer();
+namespace TriangleCalc
+{
+    public static class Program
+    {
+        private static readonly TriangleTypeDeterminer _typeDeterminer = new ();
 
-// Create triangles
-var acuteTriangle = new Triangle(5F, 6D, 7);
-var rightTriangle = new Triangle(3D, 4, 5);
-var obtuseTriangle = new Triangle(6F, 8, 12);
+        public static void Main(string[] args)
+        {
+            GetTriangles(1, false);
+            Console.ReadLine();
+        }
 
-var culture = CultureInfo.GetCultureInfo("ru-RU");
+        private static void GetTriangles(int num, bool suppressConsole = true)
+        {
+            for (int i = 0; i < num; i++)
+            {
+                GetTriangles(5, 6, 10, suppressConsole);
+                GetTriangles(5F, 6D, 7, suppressConsole);
+                GetTriangles(3D, 4, 5, suppressConsole);
+                GetTriangles(6F, 8, 12, suppressConsole);
+            }
+        }
 
-// Determine and print triangle types
-Console.WriteLine(@"Acute Triangle:{2}{2}{0}{2}({1})",
-    $@"{acuteTriangle.SideA}|{acuteTriangle.SideB}|{acuteTriangle.SideC}",
-    typeDeterminer.DetermineTriangleTypeLocalized(acuteTriangle, culture),
-    '\t');
+        private static void GetTriangles(double a, double b, double c, bool suppressConsole = true)
+        {
+            // Create triangles
+            var tiangle = new Triangle(a, b, c);
 
-Console.WriteLine(@"Right Triangle:{2}{2}{0}{2}({1})",
-    $@"{rightTriangle.SideA}|{rightTriangle.SideB}|{rightTriangle.SideC}",
-    typeDeterminer.DetermineTriangleTypeLocalized(rightTriangle, culture),
-    '\t');
+            if (suppressConsole)
+            {
+                _typeDeterminer.DetermineTriangleType(tiangle);
+            }
+            else
+            {
+                var culture = CultureInfo.GetCultureInfo("ru-RU");
+                var result = _typeDeterminer.DetermineTriangleType(tiangle, culture);
 
-Console.WriteLine(@"Obtuse Triangle:{2}{0}{2}({1})",
-    $@"{obtuseTriangle.SideA}|{obtuseTriangle.SideB}|{obtuseTriangle.SideC}",
-    typeDeterminer.DetermineTriangleTypeLocalized(obtuseTriangle, culture),
-    '\t');
-
-Console.ReadLine();
+                // Determine and print triangle types
+                Console.WriteLine(@"({0}|{1}|{2}){4}({3})",
+                    tiangle.SideA, tiangle.SideB, tiangle.SideC, result, '\t');
+            }
+        }
+    }
+}

@@ -1,5 +1,14 @@
-﻿using BenchmarkDotNet.Running;
-using TriangleCalc.Benchmark;
+using System;
+using BenchmarkDotNet.Running;
 
-BenchmarkRunner.Run<TriangleTypeBenchmark>();
-Console.ReadLine();
+namespace TriangleCalc.Benchmark
+{
+    public static class Program
+    {
+        public static void Main(string[] args)
+        {
+            BenchmarkRunner.Run<TriangleTypeBenchmark>();
+            Console.ReadLine();
+        }
+    }
+}

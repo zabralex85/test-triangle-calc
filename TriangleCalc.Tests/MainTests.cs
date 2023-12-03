@@ -2,6 +2,7 @@ using TriangleCalc.Lib.Interfaces;
 using TriangleCalc.Lib.Models;
 using TriangleCalc.Lib;
 using TriangleCalc.Lib.Enums;
+using Xunit;
 
 namespace TriangleCalc.Tests
 {

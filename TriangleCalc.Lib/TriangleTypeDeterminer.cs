@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using System.Resources;
 using System.Runtime.CompilerServices;
@@ -21,20 +22,34 @@ namespace TriangleCalc.Lib
         private const double Epsilon = 1e-10; // Tolerance for floating-point comparison
 
         /// <summary>
-        /// Determines the type of triangle based on its side lengths and returns the localized result.
+        /// Determines the type of a triangle based on its side lengths.
         /// </summary>
-        /// <param name="triangle">The triangle object to determine the type for.</param>
-        /// <param name="overrideCulture">The culture to use for localization.</param>
-        /// <returns>The localized type of the triangle (e.g. "Equilateral", "Isosceles", "Scalene").</returns>
-        public string DetermineTriangleTypeLocalized(Triangle triangle, CultureInfo? overrideCulture = null)
+        /// <param name="triangle">The triangle object containing the side lengths.</param>
+        /// <param name="overrideCulture">Optional parameter to override the culture.</param>
+        /// <returns>A string representing the type of the triangle (equilateral, isosceles, scalene).</returns>
+        public string DetermineTriangleType(Triangle triangle, CultureInfo overrideCulture = null)
         {
+            var result = DetermineTriangleType(triangle);
+            var typeName = GetEnglishName(result);
+
             if (overrideCulture is null)
             {
-                overrideCulture = CultureInfo.CurrentCulture;
+                return typeName;
             }
 
-            string typeName = DetermineTriangleType(triangle).ToString();
             return ResourceManager.GetString(typeName, overrideCulture) ?? typeName;
+        }
+
+        private static string GetEnglishName(TriangleType triangleType)
+        {
+            return triangleType switch
+            {
+                TriangleType.Acute => "Acute",
+                TriangleType.Invalid => "Invalid",
+                TriangleType.Obtuse => "Obtuse",
+                TriangleType.Right => "Right",
+                _ => "Invalid"
+            };
         }
 
         /// <summary>
@@ -46,11 +61,6 @@ namespace TriangleCalc.Lib
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TriangleType DetermineTriangleType(Triangle triangle)
         {
-            if (triangle.SideA <= 0 || triangle.SideB <= 0 || triangle.SideC <= 0)
-            {
-                return TriangleType.Invalid;
-            }
-            
             double sideA = triangle.SideA, sideB = triangle.SideB, sideC = triangle.SideC;
             double maxSide = sideA, minSide1 = sideB, minSide2 = sideC;
 
@@ -69,6 +79,11 @@ namespace TriangleCalc.Lib
             }
 
             if (minSide1 + minSide2 <= maxSide)
+            {
+                return TriangleType.Invalid;
+            }
+
+            if (maxSide <= 0 || minSide1 <= 0 || minSide2 <= 0)
             {
                 return TriangleType.Invalid;
             }
