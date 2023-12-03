@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleCalc", "TriangleCalc.csproj", "{36F653B2-8296-40EA-90FC-9F68EE4D0A93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleCalc.Lib", "..\TriangleCalc.Lib\TriangleCalc.Lib.csproj", "{B1BC24C5-055B-4D78-A469-16B05047AC1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleCalc.Tests", "..\TriangleCalc.Tests\TriangleCalc.Tests.csproj", "{B63DA14E-D7C0-4876-BB86-0B95A9FCCDD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleCalc.Benchmark", "..\TriangleCalc.Benchmark\TriangleCalc.Benchmark.csproj", "{C238138E-1D6B-4332-874B-8D40BBB555BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{4CB6D58B-6B13-4FCD-B189-0468D166412E}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36F653B2-8296-40EA-90FC-9F68EE4D0A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36F653B2-8296-40EA-90FC-9F68EE4D0A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36F653B2-8296-40EA-90FC-9F68EE4D0A93}.Debug|x64.ActiveCfg = Debug|x64
+		{36F653B2-8296-40EA-90FC-9F68EE4D0A93}.Debug|x64.Build.0 = Debug|x64
+		{36F653B2-8296-40EA-90FC-9F68EE4D0A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36F653B2-8296-40EA-90FC-9F68EE4D0A93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36F653B2-8296-40EA-90FC-9F68EE4D0A93}.Release|x64.ActiveCfg = Release|x64
+		{36F653B2-8296-40EA-90FC-9F68EE4D0A93}.Release|x64.Build.0 = Release|x64
+		{B1BC24C5-055B-4D78-A469-16B05047AC1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1BC24C5-055B-4D78-A469-16B05047AC1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1BC24C5-055B-4D78-A469-16B05047AC1B}.Debug|x64.ActiveCfg = Debug|x64
+		{B1BC24C5-055B-4D78-A469-16B05047AC1B}.Debug|x64.Build.0 = Debug|x64
+		{B1BC24C5-055B-4D78-A469-16B05047AC1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1BC24C5-055B-4D78-A469-16B05047AC1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1BC24C5-055B-4D78-A469-16B05047AC1B}.Release|x64.ActiveCfg = Release|x64
+		{B1BC24C5-055B-4D78-A469-16B05047AC1B}.Release|x64.Build.0 = Release|x64
+		{B63DA14E-D7C0-4876-BB86-0B95A9FCCDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B63DA14E-D7C0-4876-BB86-0B95A9FCCDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B63DA14E-D7C0-4876-BB86-0B95A9FCCDD3}.Debug|x64.ActiveCfg = Debug|x64
+		{B63DA14E-D7C0-4876-BB86-0B95A9FCCDD3}.Debug|x64.Build.0 = Debug|x64
+		{B63DA14E-D7C0-4876-BB86-0B95A9FCCDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B63DA14E-D7C0-4876-BB86-0B95A9FCCDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B63DA14E-D7C0-4876-BB86-0B95A9FCCDD3}.Release|x64.ActiveCfg = Release|x64
+		{B63DA14E-D7C0-4876-BB86-0B95A9FCCDD3}.Release|x64.Build.0 = Release|x64
+		{C238138E-1D6B-4332-874B-8D40BBB555BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C238138E-1D6B-4332-874B-8D40BBB555BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C238138E-1D6B-4332-874B-8D40BBB555BE}.Debug|x64.ActiveCfg = Debug|x64
+		{C238138E-1D6B-4332-874B-8D40BBB555BE}.Debug|x64.Build.0 = Debug|x64
+		{C238138E-1D6B-4332-874B-8D40BBB555BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C238138E-1D6B-4332-874B-8D40BBB555BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C238138E-1D6B-4332-874B-8D40BBB555BE}.Release|x64.ActiveCfg = Release|x64
+		{C238138E-1D6B-4332-874B-8D40BBB555BE}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF141E49-9C4B-42EA-9162-372CECBF46F2}
+	EndGlobalSection
+EndGlobal
