@@ -1,8 +1,8 @@
 # test-triangle-calc
 
-Необходимо написать библиотеку, в которой будет один метод, 
-который по трем сторонам треугольника будет определять, 
-является треугольник остроугольным, прямоугольным или тупоугольным. 
+It is necessary to write a library that will have one method,
+which on three sides of the triangle will determine
+Whether the triangle is acute, right or obtuse.
 
-Метод должен работать максимально быстро. 
-Длины могут изменяться нецелых числах.
+The method should work as quickly as possible.
+Lengths can vary in non-integer numbers.
